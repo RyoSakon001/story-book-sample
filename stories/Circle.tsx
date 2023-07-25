@@ -1,8 +1,24 @@
 import React from 'react';
 
-const Circle = () => {
+type Props = {
+  variant: 'orange' | 'green' | 'yellow';
+}
+
+const Circle = ({variant}: Props) => {
+  let bgColor;
+  switch (variant) {
+    case 'orange':
+      bgColor = 'bg-orange-500';
+      break;
+    case 'green':
+      bgColor = 'bg-green-500';
+      break;
+    case 'yellow':
+      bgColor = 'bg-yellow-500';
+      break;
+  }
   return (
-    <div className='bg-orange-500 w-14 h-14 p-2 rounded-full'></div>
+    <div className={`${bgColor} w-14 h-14 p-2 rounded-full`}></div>
   );
 }
 
