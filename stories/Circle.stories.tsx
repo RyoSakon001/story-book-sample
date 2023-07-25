@@ -12,6 +12,7 @@ const meta: Meta<typeof Circle> = {
       options: ['orange', 'green', 'yellow'],
     },
   },
+  tags: ["autodocs"]
 };
 
 export default meta;
