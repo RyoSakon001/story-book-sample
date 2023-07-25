@@ -4,6 +4,9 @@ type Props = {
   variant: 'orange' | 'green' | 'yellow';
 }
 
+/**
+ * ここにも説明文を入れることができます。
+ */
 const Circle = ({variant}: Props) => {
   let bgColor;
   switch (variant) {
