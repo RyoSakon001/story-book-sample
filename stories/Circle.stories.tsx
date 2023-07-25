@@ -1,10 +1,17 @@
 import type { Meta, StoryObj } from '@storybook/react';
-
 import Circle from './Circle';
 
 const meta: Meta<typeof Circle> = {
-  title: 'Circle',
   component: Circle,
+  title: 'Circle',
+  argTypes: {
+    variant: {
+      control: {
+        type: 'radio',
+      },
+      options: ['orange', 'green', 'yellow'],
+    },
+  },
 };
 
 export default meta;
@@ -25,3 +32,13 @@ export const YellowCircle: Story = {
     variant: 'yellow',
   }
 };
+
+export const GroupedCircles: Story = {
+  render: () => (
+    <div>
+      <Circle variant='orange' />
+      <Circle variant='green' />
+      <Circle variant='yellow' />
+    </div>
+  )
+}
