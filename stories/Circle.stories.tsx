@@ -18,6 +18,9 @@ const meta: Meta<typeof Circle> = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
+/**
+ * ここに、Docsに表示される説明文を書きます。これはオレンジ色の円です。
+ */
 export const BaseCircle: Story = {
   args: {
     variant: 'orange',
